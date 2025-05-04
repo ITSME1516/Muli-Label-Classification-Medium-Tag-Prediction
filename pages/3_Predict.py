@@ -11,9 +11,9 @@ from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
 
 # Load saved components
-lr = joblib.load(r'../tag_predictor.pkl')
-tfidf = joblib.load(r'../tfidf_vectorizer.pkl')
-mlb_classes = joblib.load(r'../mlb_classes.pkl')
+lr = joblib.load(r'/tag_predictor.pkl')
+tfidf = joblib.load(r'/tfidf_vectorizer.pkl')
+mlb_classes = joblib.load(r'/mlb_classes.pkl')
 
 # Initialize preprocessing tools
 speller = Speller()
