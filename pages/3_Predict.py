@@ -13,13 +13,13 @@ import pickle as pkl
 
 # Load saved components
 with open(r'pages/tag_predictor.pkl',"rb") as pred:
-    lr = pkl.load(pred)
+    lr = joblib.load(pred)
 
 with open(r'pages/tfidf_vectorizer.pkl',"rb") as tf:
-    tfidf = pkl.load(tf)
+    tfidf = joblib.load(tf)
 
 with open(r'pages/tag_predictor.pkl',"rb") as mlb:
-    mlb_classes = pkl.load(mlb)
+    mlb_classes = joblib.load(mlb)
 
 
 # Initialize preprocessing tools
