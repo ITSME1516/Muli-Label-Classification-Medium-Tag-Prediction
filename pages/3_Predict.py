@@ -9,16 +9,11 @@ from textacy.preprocessing.remove import accents
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
-import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # Load saved components
-# lr = joblib.load(r'/tag_predictor.pkl')
-# tfidf = joblib.load(r'/tfidf_vectorizer.pkl')
-# mlb_classes = joblib.load(r'/mlb_classes.pkl')
-lr = joblib.load(os.path.join(BASE_DIR, 'tag_predictor.pkl'))
-tfidf = joblib.load(os.path.join(BASE_DIR, 'tfidf_vectorizer.pkl'))
-mlb_classes = joblib.load(os.path.join(BASE_DIR, 'mlb_classes.pkl'))
+lr = joblib.load(r'tag_predictor.pkl')
+tfidf = joblib.load(r'tfidf_vectorizer.pkl')
+mlb_classes = joblib.load(r'mlb_classes.pkl')
 
 # Initialize preprocessing tools
 speller = Speller()
