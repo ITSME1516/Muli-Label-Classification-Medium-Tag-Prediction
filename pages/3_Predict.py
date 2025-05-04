@@ -9,11 +9,18 @@ from textacy.preprocessing.remove import accents
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
+import pickle as pkl
 
 # Load saved components
-lr = joblib.load(r'pages/tag_predictor.pkl')
-tfidf = joblib.load(r'pages/tfidf_vectorizer.pkl')
-mlb_classes = joblib.load(r'pages/mlb_classes.pkl')
+with open(r'pages/tag_predictor.pkl',"rb) as pred:
+    lr = pkl.load(pred)
+
+with open(r'pages/tfidf_vectorizer.pkl',"rb) as tf:
+    tfidf = pkl.load(tf)
+
+with open(r'pages/tag_predictor.pkl',"rb) as mlb:
+    mlb_classes = pkl.load(mlb)
+
 
 # Initialize preprocessing tools
 speller = Speller()
