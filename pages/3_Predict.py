@@ -12,13 +12,13 @@ from nltk.stem import SnowballStemmer, WordNetLemmatizer
 import pickle as pkl
 
 # Load saved components
-with open(r'pages/tag_predictor.pkl',"rb) as pred:
+with open(r'pages/tag_predictor.pkl',"rb") as pred:
     lr = pkl.load(pred)
 
-with open(r'pages/tfidf_vectorizer.pkl',"rb) as tf:
+with open(r'pages/tfidf_vectorizer.pkl',"rb") as tf:
     tfidf = pkl.load(tf)
 
-with open(r'pages/tag_predictor.pkl',"rb) as mlb:
+with open(r'pages/tag_predictor.pkl',"rb") as mlb:
     mlb_classes = pkl.load(mlb)
 
 
