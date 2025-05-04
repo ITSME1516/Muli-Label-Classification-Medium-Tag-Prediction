@@ -165,6 +165,10 @@ st.markdown("""
         <a href="/Predict" class="bubble-button">🔍 Try Tag Prediction</a>
     </div>
 """, unsafe_allow_html=True)
-import os
 
-st.write(os.listdir("pages/"))
+
+import joblib
+lr = joblib.load('tag_predictor.pkl')
+tfidf = joblib.load('tfidf_vectorizer.pkl')
+mlb_classes = joblib.load('mlb_classes.pkl')
+
