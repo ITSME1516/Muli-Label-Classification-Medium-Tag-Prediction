@@ -165,3 +165,6 @@ st.markdown("""
         <a href="/Predict" class="bubble-button">🔍 Try Tag Prediction</a>
     </div>
 """, unsafe_allow_html=True)
+import os
+
+st.write(os.listdir("pages/"))
