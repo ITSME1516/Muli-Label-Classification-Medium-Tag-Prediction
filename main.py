@@ -1,5 +1,6 @@
 import streamlit as st
-
+import nltk
+nltk.download('all')
 # Problem Statement Page
 st.markdown("""
         
