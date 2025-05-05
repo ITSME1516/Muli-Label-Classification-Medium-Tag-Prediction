@@ -2,6 +2,23 @@ import streamlit as st
 import nltk
 nltk.download('all')
 # Problem Statement Page
+
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #002b36;
+            color: white;
+        }
+        .stButton>button {
+            background-color: #FF4B4B;
+            color: white;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown("""
         
     <style>
