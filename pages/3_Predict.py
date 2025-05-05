@@ -12,9 +12,9 @@ from nltk.stem import SnowballStemmer, WordNetLemmatizer
 import pickle as pkl
 
 # Load saved components
-lr = joblib.load('pages/tag_predictor.pkl')
-tfidf = joblib.load('pages/tfidf_vectorizer.pkl')
-mlb_classes = joblib.load('pages/mlb_classes.pkl')
+lr = joblib.load('tag_predictor.pkl')
+tfidf = joblib.load('tfidf_vectorizer.pkl')
+mlb_classes = joblib.load('mlb_classes.pkl')
 
 # Initialize preprocessing tools
 speller = Speller()
