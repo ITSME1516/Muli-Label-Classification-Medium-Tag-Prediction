@@ -10,6 +10,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
 from sklearn.linear_model import SGDClassifier
+import nltk
 nltk.download("all")
 # Load saved components
 lr = joblib.load('tag_predictor.pkl')
