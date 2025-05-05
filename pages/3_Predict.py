@@ -9,7 +9,7 @@ from textacy.preprocessing.remove import accents
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
-import pickle as pkl
+from sklearn.linear_model import SGDClassifier
 
 # Load saved components
 lr = joblib.load('tag_predictor.pkl')
