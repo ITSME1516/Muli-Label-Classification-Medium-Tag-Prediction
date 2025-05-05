@@ -40,13 +40,13 @@ lem = WordNetLemmatizer()
 
 # Text preprocessing function
 def text_pre_processing(text):
-    text = re.sub(r"[^a-z0-9]", " ", text.lower())  # Normalize case & remove punctuation
+    text = re.sub(r"[^a-z]", " ", text.lower())  # Normalize case & remove punctuation
     words = word_tokenize(text)
     new_text = [lem.lemmatize(stem.stem(word)) for word in words if word not in stopword]
     return " ".join(new_text)
 
 # Prediction function
-def predict_tags(text, model=lr, threshold=0.5):
+def predict_tags(text, model=lr, threshold=0.3):
     clean_text = text_pre_processing(text)
     text_tfidf = tfidf.transform([clean_text])
     
