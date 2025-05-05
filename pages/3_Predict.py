@@ -10,6 +10,8 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
 from sklearn.linear_model import SGDClassifier
+from textacy.preprocessing.remove import accents
+from emoji import demojize
 
 st.markdown(
     """
@@ -40,7 +42,13 @@ lem = WordNetLemmatizer()
 
 # Text preprocessing function
 def text_pre_processing(text):
+    text = text.lower()
+    
     text = re.sub(r"[^a-z]", " ", text.lower())  # Normalize case & remove punctuation
+    # Emoji
+    text = demojize(text)
+    # Accents
+    text = accents(text)
     words = word_tokenize(text)
     new_text = [lem.lemmatize(stem.stem(word)) for word in words if word not in stopword]
     return " ".join(new_text)
