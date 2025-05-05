@@ -11,6 +11,21 @@ from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
 from sklearn.linear_model import SGDClassifier
 
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #002b36;
+            color: white;
+        }
+        .stButton>button {
+            background-color: #FF4B4B;
+            color: white;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Load saved components
 lr = joblib.load('tag_predictor.pkl')
