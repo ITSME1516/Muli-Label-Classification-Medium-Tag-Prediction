@@ -11,7 +11,7 @@ from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer, WordNetLemmatizer
 from sklearn.linear_model import SGDClassifier
 import nltk
-nltk.download("all")
+nltk.download("stopwords")
 # Load saved components
 lr = joblib.load('tag_predictor.pkl')
 tfidf = joblib.load('tfidf_vectorizer.pkl')
