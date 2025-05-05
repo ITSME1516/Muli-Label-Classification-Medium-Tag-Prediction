@@ -168,8 +168,4 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-import joblib
-lr = joblib.load('pages/tag_predictor.pkl')
-tfidf = joblib.load('tfidf_vectorizer.pkl')
-mlb_classes = joblib.load('mlb_classes.pkl')
 
