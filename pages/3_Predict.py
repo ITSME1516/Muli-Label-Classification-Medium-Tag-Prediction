@@ -46,7 +46,7 @@ def text_pre_processing(text):
     return " ".join(new_text)
 
 # Prediction function
-def predict_tags(text, model=lr, threshold=0.2):
+def predict_tags(text, model=lr, threshold=0.5):
     clean_text = text_pre_processing(text)
     text_tfidf = tfidf.transform([clean_text])
     
