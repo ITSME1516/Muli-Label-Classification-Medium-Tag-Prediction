@@ -46,7 +46,7 @@ def text_pre_processing(text):
     
     text = re.sub(r"[^a-z]", " ", text.lower())  # Normalize case & remove punctuation
     # Emoji
-    text = demojize(text)
+    # text = demojize(text)
     # Accents
     text = accents(text)
     words = word_tokenize(text)
