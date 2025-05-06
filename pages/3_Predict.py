@@ -143,7 +143,7 @@ st.markdown("""
     <div class="bubble"></div>
 """, unsafe_allow_html=True)
 
-st.title("🔥 Multi-Label Classification with 3D Floating Bubbles 🔥")
+st.title("🔥 Muli-Label-Classification-Medium-Tag-Prediction 🔥")
 
 # **Input box for user text**
 test_texts = st.text_area("✍ **Enter your article:**", height=200, value="20 Fastest Programming Languages in 2025 to Speed Up Development...")
